@@ -1,4 +1,4 @@
-import { TypeOutput, setLengthLeft, toBytes, toType } from '@ethereumjs/util'
+import { TypeOutput, setLengthLeft, toBytes, toType } from '@doomjs/ethereumjs-util'
 
 import type { TypedTxData } from './types.js'
 

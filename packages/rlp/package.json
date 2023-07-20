@@ -1,6 +1,6 @@
 {
-  "name": "@ethereumjs/rlp",
-  "version": "5.0.0-rc.1",
+  "name": "@doomjs/ethereumjs-rlp",
+  "version": "5.0.0",
   "description": "Recursive Length Prefix Encoding Module",
   "keywords": [
     "rlp",
@@ -49,7 +49,6 @@
     "lint": "../../config/cli/lint.sh",
     "lint:diff": "../../config/cli/lint-diff.sh",
     "lint:fix": "../../config/cli/lint-fix.sh",
-    "prepublishOnly": "../../config/cli/prepublish.sh",
     "test": "npm run test:node && npm run test:browser",
     "test:browser": "npx vitest run --browser.name=chrome --browser.headless",
     "test:node": "npx vitest run",
@@ -57,5 +56,9 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }

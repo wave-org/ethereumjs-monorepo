@@ -1,5 +1,5 @@
 import type { Chain, ConsensusAlgorithm, ConsensusType, Hardfork } from './enums.js'
-import type { BigIntLike } from '@ethereumjs/util'
+import type { BigIntLike } from '@doomjs/ethereumjs-util'
 
 export interface ChainName {
   [chainId: string]: string

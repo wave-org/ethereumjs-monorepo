@@ -1,4 +1,4 @@
-import { hexToBytes } from '@ethereumjs/util'
+import { hexToBytes } from '@doomjs/ethereumjs-util'
 
 export enum Chain {
   Mainnet = 1,

@@ -1,4 +1,4 @@
-import { Chain, Common } from '@ethereumjs/common'
+import { Chain, Common } from '@doomjs/ethereumjs-common'
 import {
   Address,
   MAX_INTEGER,
@@ -11,7 +11,7 @@ import {
   publicToAddress,
   toBytes,
   unpadBytes,
-} from '@ethereumjs/util'
+} from '@doomjs/ethereumjs-util'
 
 import { Capability, TransactionType } from './types.js'
 import { checkMaxInitCodeSize } from './util.js'
@@ -24,8 +24,8 @@ import type {
   TxOptions,
   TxValuesArray,
 } from './types.js'
-import type { Hardfork } from '@ethereumjs/common'
-import type { BigIntLike } from '@ethereumjs/util'
+import type { Hardfork } from '@doomjs/ethereumjs-common'
+import type { BigIntLike } from '@doomjs/ethereumjs-util'
 
 interface TransactionCache {
   hash: Uint8Array | undefined

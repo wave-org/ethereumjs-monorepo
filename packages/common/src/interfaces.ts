@@ -1,4 +1,4 @@
-import type { Account, Address, PrefixedHexString } from '@ethereumjs/util'
+import type { Account, Address, PrefixedHexString } from '@doomjs/ethereumjs-util'
 
 export interface StorageDump {
   [key: string]: string

@@ -1,4 +1,4 @@
-import { RLP } from '@ethereumjs/rlp'
+import { RLP } from '@doomjs/ethereumjs-rlp'
 import {
   MAX_INTEGER,
   bigIntToHex,
@@ -8,7 +8,7 @@ import {
   toBytes,
   unpadBytes,
   validateNoLeadingZeroes,
-} from '@ethereumjs/util'
+} from '@doomjs/ethereumjs-util'
 import { keccak256 } from 'ethereum-cryptography/keccak.js'
 
 import { BaseTransaction } from './baseTransaction.js'
@@ -20,7 +20,7 @@ import type {
   JsonTx,
   TxOptions,
 } from './types.js'
-import type { Common } from '@ethereumjs/common'
+import type { Common } from '@doomjs/ethereumjs-common'
 
 type TxData = AllTypesTxData[TransactionType.Legacy]
 type TxValuesArray = AllTypesTxValuesArray[TransactionType.Legacy]

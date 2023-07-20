@@ -1,17 +1,17 @@
-import { bytesToBigInt, toBytes } from '@ethereumjs/util'
+import { bytesToBigInt, toBytes } from '@doomjs/ethereumjs-util'
 
 import type { FeeMarketEIP1559Transaction } from './eip1559Transaction.js'
 import type { AccessListEIP2930Transaction } from './eip2930Transaction.js'
 import type { BlobEIP4844Transaction } from './eip4844Transaction.js'
 import type { LegacyTransaction } from './legacyTransaction.js'
-import type { AccessList, AccessListBytes, Common } from '@ethereumjs/common'
-import type { Address, AddressLike, BigIntLike, BytesLike } from '@ethereumjs/util'
+import type { AccessList, AccessListBytes, Common } from '@doomjs/ethereumjs-common'
+import type { Address, AddressLike, BigIntLike, BytesLike } from '@doomjs/ethereumjs-util'
 export type {
   AccessList,
   AccessListBytes,
   AccessListBytesItem,
   AccessListItem,
-} from '@ethereumjs/common'
+} from '@doomjs/ethereumjs-common'
 
 /**
  * Can be used in conjunction with {@link Transaction.supports}

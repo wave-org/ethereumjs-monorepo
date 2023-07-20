@@ -1,9 +1,9 @@
-import { bytesToHex, hexToBytes, setLengthLeft } from '@ethereumjs/util'
+import { bytesToHex, hexToBytes, setLengthLeft } from '@doomjs/ethereumjs-util'
 
 import { isAccessList } from './types.js'
 
 import type { AccessList, AccessListBytes, AccessListItem } from './types.js'
-import type { Common } from '@ethereumjs/common'
+import type { Common } from '@doomjs/ethereumjs-common'
 
 export function checkMaxInitCodeSize(common: Common, length: number) {
   const maxInitCodeSize = common.param('vm', 'maxInitCodeSize')

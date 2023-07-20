@@ -1,6 +1,6 @@
 {
-  "name": "@ethereumjs/tx",
-  "version": "5.0.0-rc.1",
+  "name": "@doomjs/ethereumjs-tx",
+  "version": "5.0.0",
   "description": "Implementation of the various Ethereum Transaction Types",
   "keywords": [
     "ethereum",
@@ -49,16 +49,15 @@
     "lint": "../../config/cli/lint.sh",
     "lint:diff": "../../config/cli/lint-diff.sh",
     "lint:fix": "../../config/cli/lint-fix.sh",
-    "prepublishOnly": "../../config/cli/prepublish.sh",
     "test": "npm run test:node && npm run test:browser",
     "test:browser": "npx vitest run --config=./vitest.config.browser.ts --browser.name=chrome --browser.headless",
     "test:node": "npx vitest run",
     "tsc": "../../config/cli/ts-compile.sh"
   },
   "dependencies": {
-    "@ethereumjs/common": "4.0.0-rc.1",
-    "@ethereumjs/rlp": "5.0.0-rc.1",
-    "@ethereumjs/util": "9.0.0-rc.1",
+    "@doomjs/ethereumjs-common": "4.0.0",
+    "@doomjs/ethereumjs-rlp": "5.0.0",
+    "@doomjs/ethereumjs-util": "9.0.0",
     "ethereum-cryptography": "^2.1.2"
   },
   "peerDependencies": {
@@ -77,5 +76,9 @@
   },
   "engines": {
     "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   }
 }
