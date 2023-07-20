@@ -1,6 +1,6 @@
 {
   "name": "@doomjs/ethereumjs-tx",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "Implementation of the various Ethereum Transaction Types",
   "keywords": [
     "ethereum",
@@ -55,7 +55,7 @@
     "tsc": "../../config/cli/ts-compile.sh"
   },
   "dependencies": {
-    "@doomjs/ethereumjs-common": "4.0.0",
+    "@doomjs/ethereumjs-common": "4.0.1",
     "@doomjs/ethereumjs-rlp": "5.0.0",
     "@doomjs/ethereumjs-util": "9.0.0",
     "ethereum-cryptography": "^2.1.2"

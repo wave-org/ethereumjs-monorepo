@@ -5,9 +5,10 @@ import {
   hexToBytes,
   intToBytes,
   toType,
-} from '@ethereumjs/util'
+} from '@doomjs/ethereumjs-util'
 import { crc32 as crc } from 'crc'
-import { EventEmitter } from 'events'
+// can't support EventEmitter in react-native
+// import { EventEmitter } from 'events'
 
 import * as goerli from './chains/goerli.json'
 import * as mainnet from './chains/mainnet.json'
@@ -33,7 +34,7 @@ import type {
   HardforkByOpts,
   HardforkConfig,
 } from './types.js'
-import type { BigIntLike, PrefixedHexString } from '@ethereumjs/util'
+import type { BigIntLike, PrefixedHexString } from '@doomjs/ethereumjs-util'
 
 type HardforkSpecKeys = keyof typeof HARDFORK_SPECS
 type HardforkSpecValues = typeof HARDFORK_SPECS[HardforkSpecKeys]
@@ -55,7 +56,7 @@ export class Common {
 
   private HARDFORK_CHANGES: [HardforkSpecKeys, HardforkSpecValues][]
 
-  public events: EventEmitter
+  // public events: EventEmitter
 
   /**
    * Creates a {@link Common} object for a custom chain, based on a standard one.
@@ -223,7 +224,7 @@ export class Common {
   }
 
   constructor(opts: CommonOpts) {
-    this.events = new EventEmitter()
+    // this.events = new EventEmitter()
 
     this._customChains = opts.customChains ?? []
     this._chainParams = this.setChain(opts.chain)
@@ -285,7 +286,7 @@ export class Common {
       if (hfChanges[0] === hardfork) {
         if (this._hardfork !== hardfork) {
           this._hardfork = hardfork
-          this.events.emit('hardforkChanged', hardfork)
+          // this.events.emit('hardforkChanged', hardfork)
         }
         existing = true
       }
@@ -985,7 +986,7 @@ export class Common {
    */
   copy(): Common {
     const copy = Object.assign(Object.create(Object.getPrototypeOf(this)), this)
-    copy.events = new EventEmitter()
+    // copy.events = new EventEmitter()
     return copy
   }
 
